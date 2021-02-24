@@ -7,16 +7,6 @@ const jwt = require('jsonwebtoken')
 app.use(express.json()) //Lets our app use JSON from the body that gets pased to it from request
 
 
-const posts = [
-    {
-        username : 'Ashesh',
-        title: 'Post 1'
-    },
-    {
-        username : 'Neha',
-        title: 'Post 2'
-    }
-]
 
 const users = [
     
@@ -78,17 +68,6 @@ app.post('/users/login',async (req,res)=>{
 
 })
 
-
-app.get('/posts',function(req,res){
-    res.json(posts)
-})
-
-app.post('/login',function(req,res){
-    //Authenticate User
-
-    const username = req.body.username
-
-})
 
 app.listen('3000',function(){
     console.log('Listening on port 3000')
